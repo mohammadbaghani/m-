@@ -1,78 +1,87 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 body {
-  width: 100vw;
-  height: 100vh;
-  background: #f2f4f6;
-  overflow: hidden;
-}
-
-ul {
-  list-style: none;
-}
-
-.context-menu {
-  position: absolute;
-  color: rgb(0, 247, 12);
-  background-color: #a7ecdd;
-}
-
-.menu {
   display: flex;
-  flex-direction: column;
-  background-color: rgb(16, 15, 24);
-  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
 
-  padding: 10px 0;
+  font-size: 120%;
+
 }
 
-.menu>li>a {
-  font: inherit;
-  border: 0;
-  padding: 10px 30px 10px 15px;
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
   width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+
+.search {
   display: flex;
   align-items: center;
-  position: relative;
-  text-decoration: unset;
-  color: rgb(43, 39, 49);
-  font-weight: 500;
-  transition: 0.5s linear;
-  -webkit-transition: 0.5s linear;
-  -moz-transition: 0.5s linear;
-  -ms-transition: 0.5s linear;
-  -o-transition: 0.5s linear;
-}
-
-.menu>li>a:hover {
-  background: #26282c;
-  color: #12df56;
-}
-
-.menu>li>a>i {
-  padding-right: 10px;
-}
-
-.menu>li.trash>a:hover {
-  color: rgb(255, 0, 43);
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  color: #ffffff;
+  justify-content: center;
 }
 
 button {
-  height: 100px;
-  width: 100px;
-  color: yellow;
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
